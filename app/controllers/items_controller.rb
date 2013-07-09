@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
+
+  before_filter :authenticate_user!, :only => [:new, :create]
+
   def index
     @items = Item.all
 
@@ -42,6 +45,7 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(params[:item])
+    @item.user_id = current_user.id
     
     respond_to do |format|
       if @item.save
