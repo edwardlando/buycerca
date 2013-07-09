@@ -25,7 +25,8 @@ class ItemsController < ApplicationController
   # GET /items/new.json
   def new
     @item = Item.new
-
+    @groups = Group.all
+  
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @item }
@@ -41,7 +42,7 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(params[:item])
-
+    
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }

@@ -1,21 +1,10 @@
-<h1>Listing groups</h1>
+<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= link_to "SELL", new_item_path %> <br/>
 
-<% @groups.each do |group| %>
-  <tr>
-    <td><%= link_to 'Show', group %></td>
-    <td><%= link_to 'Edit', edit_group_path(group) %></td>
-    <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+
+<h1>Find your community</h1>
+
+<% @groups.each do |g| %>
+  <%= link_to g.name, g %> <br/>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Group', new_group_path %>

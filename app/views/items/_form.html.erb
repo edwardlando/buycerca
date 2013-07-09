@@ -11,6 +11,21 @@
     </div>
   <% end %>
 
+  <li class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :placeholder => "Item name" %> 
+  </li>
+
+  <li class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price, :placeholder => "Price" %> 
+  </li>
+
+  <li class="field">
+    <%= f.label :group_id %><br />
+    <%= f.select :group_id, @groups.collect {|c| [ c.name, c.id ]} %>
+  </li>
+
   <div class="actions">
     <%= f.submit %>
   </div>
