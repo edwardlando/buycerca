@@ -26,6 +26,12 @@
     <%= f.select :group_id, @groups.collect {|c| [ c.name, c.id ]} %>
   </li>
 
+  <li class="field">
+    <%= f.label :avatar, "Item image" %><br />
+    <%= f.file_field :avatar %>
+  </li>
+
+  <br/><br/><br/>
   <div class="actions">
     <%= f.submit %>
   </div>

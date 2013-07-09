@@ -1,5 +1,6 @@
 <% @items.each do |i| %>
   <%= link_to i.name, i %> <br/>
+  <%= image_tag i.avatar.url(:medium) %> <br/>
 <% end %>
 
 

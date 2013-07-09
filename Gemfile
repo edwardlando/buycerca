@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
