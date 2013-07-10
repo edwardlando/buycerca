@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710064631) do
+ActiveRecord::Schema.define(:version => 20130710080841) do
 
   create_table "groups", :force => true do |t|
     t.datetime "created_at",          :null => false
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20130710064631) do
     t.string   "school"
     t.string   "role"
     t.string   "first_name"
+    t.string   "large_image"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
