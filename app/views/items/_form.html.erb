@@ -12,37 +12,37 @@
   <% end %>
 
   <li class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, :placeholder => "Item name" %> 
+    <%= f.label :name %>
+    <%= f.text_field :name, :placeholder => "Leather couch" %> 
   </li>
 
   <li class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price, :placeholder => "Price" %> 
+    <%= f.label :price %>
+    <%= f.text_field :price, :placeholder => "140" %> 
   </li>
 
   <li class="field">
-    <%= f.label :group_id %><br />
+    <%= f.label :group_id %>
     <%= f.select :group_id, @groups.collect {|c| [ c.name, c.id ]} %>
   </li>
 
   <li class="field">
-    <%= f.label :avatar, "Item image" %><br />
+    <%= f.label :avatar, "Item image" %>
     <%= f.file_field :avatar %>
   </li>
 
   <li class="field">
-    <%= f.label :reason %><br />
-    <%= f.text_field :reason, :placeholder => "Why are you selling this?" %>
+    <%= f.label :reason, "Why are you selling this?" %>
+    <%= f.text_field :reason, :placeholder => "I'm moving out!" %>
   </li>
 
   <li class="field">
-    <%= f.label :story %><br />
-    <%= f.text_field :story, :placeholder => "Most awesome story associated with this item." %>
+    <%= f.label :story %>
+    <%= f.text_area :story, :placeholder => "Watched my team win the superbowl on this couch!", :rows => 3 %>
   </li>
 
   <br/><br/><br/>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "List this item!", :class => "btn btn-large btn-primary" %>
   </div>
 <% end %>
