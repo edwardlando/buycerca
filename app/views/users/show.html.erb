@@ -1,14 +1,16 @@
 
 
-<div>
-	<%= image_tag (@user.large_image) %>
+<div align="center" class="user_info">
+	<%= image_tag (@user.large_image), :class => "circular" %>
+	<h3><%= @user.name %></h3>
+	<p><%= @user.location %></p>
 </div>
 
-<%= @user.name %>
+<h2>Here's what I'm selling</h2>
 
-<%= @user.location %>
+<br/><br/><br/>
 
 <% if @user == current_user %>
-	<%= link_to 'Edit', edit_user_registration_path(@user) %>
+	<h5><%= link_to 'Edit your profile', edit_user_registration_path(@user) %></h5>
 <% end %>
 
