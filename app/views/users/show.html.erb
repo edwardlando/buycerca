@@ -22,6 +22,9 @@
 						<strong>Most awesome story about this item:</strong> <%= i.story %>
 					</div>
 				</div>
+				<div class="mini_profile">
+					<%= link_to i.group.name, i.group %>
+				</div>
 				<div class="item_row_price">
 					<%= number_to_currency(i.price) %>
 				</div>

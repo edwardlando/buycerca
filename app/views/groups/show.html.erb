@@ -1,5 +1,9 @@
 
 <div class="category_results">
+   <div align="center">
+	<%= image_tag (@group.avatar.url(:medium)), :class => "circular_group" %>
+	<h3><%= @group.name %></h3>
+</div>
 	<div id="items">
 		<% @items.each do |i| %>
 			<div class="item_row">
@@ -13,7 +17,7 @@
 					</div>
 				</div>
 				<div class="mini_profile">
-					<%= link_to image_tag(i.user.image, :class => "avatar avatar_small"), :class => "mini_profile_avatar" %>
+					<%= link_to image_tag(i.user.image, :class => "avatar avatar_small"), i.user, :class => "mini_profile_avatar" %>
 				  	<div class="mini_profile_text">
 				  		<%= link_to i.user.name, i.user, :class => "mini_profile_name" %>
 				  	</div>

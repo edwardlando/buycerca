@@ -48,6 +48,18 @@ a:hover {
 	-moz-border-radius: 150px;
 }
 
+.circular_group {
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	position: relative;
+	height: 165px;
+	width: 280px;
+	overflow: hidden;
+}
+
+
+
 .user_info {
 	margin-bottom: 50px;
 }
@@ -155,10 +167,16 @@ a:hover {
 #items {
 	background-color: white;
 	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
 }
 
-#items a {
+#items a, .user_profile_link {
 	color: #1d95cb;
+}
+
+.user_profile_link {
+	font-weight: bold;
 }
 
 #items .item_row {

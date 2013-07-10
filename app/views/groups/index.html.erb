@@ -12,6 +12,6 @@
 
 <div class="row">
 <% @groups.each do |g| %>
-	  <div class="group_tile"><strong><%= g.name %></strong><%= link_to image_tag(g.avatar.url(:medium)), g %></div> 
+	  <div class="group_tile"><strong><%= g.name %></strong><%= link_to image_tag(g.avatar.url(:medium), :class => "circular_group"), g %></div> 
 <% end %>
 </div>
