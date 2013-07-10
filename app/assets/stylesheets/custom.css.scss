@@ -90,14 +90,16 @@ a:hover {
 	float: left;
 	overflow: hidden;
 	width: 360px;
-	height: 67px;
+	height: 100%;
 }
 
 .item_row .mini_profile {
 	position: absolute;
-	left: 216px;
-	bottom: 10px;
-	width: 300px;
+	right: 15px;
+	bottom: 21px;
+	margin: 0px;
+	text-align: right;
+	font-size: 14px;
 }
 
 .listing_row .listing_row_price {
@@ -124,6 +126,7 @@ a:hover {
 	display: block;
 	font-size: 18px;
 	font-weight: 600;
+	margin-bottom: 10px;
 }
 
 .item_row .item_row_description {
