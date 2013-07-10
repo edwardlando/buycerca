@@ -6,7 +6,29 @@
 	<p><%= @user.location %></p>
 </div>
 
-<h2>Here's what I'm selling</h2>
+<% unless @user.items.empty? %>
+
+	<h2>Here's what I'm selling</h2>
+
+	<div class="row">
+	<% @user.items.each do |i| %>
+		  <div class="item_tile"><strong><%= g.name %></strong><%= link_to image_tag(i.avatar.url(:medium)), i %></div> 
+	<% end %>
+	</div>
+
+<% end %>
+
+<% unless @user.story.blank? %>
+
+<div align="center">
+<h2>My story</h2>
+
+<%= @user.story %>
+</div>
+
+<% end %>
+
+
 
 <br/><br/><br/>
 

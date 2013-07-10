@@ -11,7 +11,7 @@ body {
 html, body, p, h1, h2, h3, a, span, div {
 	font-family: "Helvetica Neue";
 }
-.group_tile {
+.group_tile, .item_tile {
 	position: relative;
 	height: 165px;
 	width: 280px;
@@ -31,6 +31,7 @@ html, body, p, h1, h2, h3, a, span, div {
 
 a:hover {
 	color: black !important;
+	background-color: transparent !important;
 
 }
 
