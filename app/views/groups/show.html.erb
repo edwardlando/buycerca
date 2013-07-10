@@ -1,15 +1,27 @@
-<% @items.each do |i| %>
-	<div class="item_tile">
-	  <div class="item_info">
-		  <p class="item_name"><%= link_to i.name, i %></p> 
-		  <%= image_tag i.avatar.url(:medium) %> <br/>
-	  </div>
-	  <div class="seller">
-	  	<%= link_to current_user do %>
-		  	<%= image_tag i.user.image %> <%= i.user.name %>
-	  	<% end %>
-	  </div>
+
+<div class="category_results">
+	<div id="items">
+		<% @items.each do |i| %>
+			<div class="item_row">
+				<div class="item_row_photo photo small"><%= image_tag i.avatar.url(:medium) %>
+				</div>
+				<div class="item_row_info">
+					<%= link_to i.name, i, :class => "item_row_title" %>
+					<div class="item_row_description">
+						<%= i.reason %> <br/>
+						<%= i.story %>
+					</div>
+				</div>
+				<div class="mini_profile">
+					<%= link_to image_tag(i.user.image, :class => "avatar avatar_small"), :class => "mini_profile_avatar" %>
+				  	<div class="mini_profile_text">
+				  		<%= link_to i.user.name, i.user, :class => "mini_profile_name" %>
+				  	</div>
+				</div>
+				<div class="item_row_price">
+					<%= number_to_currency(i.price) %>
+				</div>
+			</div>
+		<% end %>
 	</div>
-<% end %>
-
-
+</div>

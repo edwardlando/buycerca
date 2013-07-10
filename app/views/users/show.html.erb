@@ -7,14 +7,29 @@
 </div>
 
 <% unless @user.items.empty? %>
-
 	<h2 align="center">Here's what I'm selling</h2>
-
-	<div class="row user_items">
-	<% @user.items.each do |i| %>
-		  <div class="item_tile"><div class="item_name"><%= i.name %></div><%= link_to image_tag(i.avatar.url(:medium)), i %></div> 
-	<% end %>
+	
+<div class="category_results">
+	<div id="items">
+		<% @user.items.each do |i| %>
+			<div class="item_row">
+				<div class="item_row_photo photo small"><%= image_tag i.avatar.url(:medium) %>
+				</div>
+				<div class="item_row_info">
+					<%= link_to i.name, i, :class => "item_row_title" %>
+					<div class="item_row_description">
+						<strong>Why I'm selling it:</strong> <%= i.reason %> <br/> <br/>
+						<strong>Most awesome story about this item:</strong> <%= i.story %>
+					</div>
+				</div>
+				<div class="item_row_price">
+					<%= number_to_currency(i.price) %>
+				</div>
+			</div>
+		<% end %>
 	</div>
+</div>
+
 
 <% end %>
 

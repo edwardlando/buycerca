@@ -6,6 +6,7 @@ html, body {
 body { 
 	padding-top: 60px;
 	margin-top: 20px;
+	background-color: #EEF0F3 !important;
  }
 
 html, body, p, h1, h2, h3, a, span, div, div {
@@ -19,16 +20,6 @@ html, body, p, h1, h2, h3, a, span, div, div {
 	float: left;
 	margin: 0 25px 25px 0;
 }
-
-.item_tile {
-	position: relative;
-	height: 500px;
-	width: 280px;
-	overflow: hidden;
-	float: left;
-	margin: 0 25px 25px 0;
-}
-
 
 
 .field {
@@ -65,10 +56,118 @@ a:hover {
 	margin-top: 50px;
 }
 
-.seller, .item_name {
-	font-size: 18px;
-	font-weight: bold;
+#items .items_row {
+	padding: 18px;
+	border-bottom: 1px solid #eee;
 }
 
+.item_row {
+	position: relative;
+	height: 110px;
+	padding: 18px 18px 24px 18px;
+	list-style-type: none;
+	clear: both;
+}
 
+.item_row .item_row_photo {
+	display: block;
+	float: left;
+	width: 178px;
+	height: 110.004px;
+	border-radius: 3px;
+	margin-right: 20px;
+}
 
+.photo {
+	position: relative;
+	display: block;
+	padding: 0;
+	overflow: hidden;
+}
+
+.item_row .item_row_info {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 360px;
+	height: 67px;
+}
+
+.item_row .mini_profile {
+	position: absolute;
+	left: 216px;
+	bottom: 10px;
+	width: 300px;
+}
+
+.listing_row .listing_row_price {
+	float: right;
+	font-weight: 600;
+	font-size: 32px;
+	color: #383834;
+	line-height: 28px;
+}
+
+.mini_profile .mini_profile_name {
+	font-weight: 500;
+}
+
+.item_row .item_row_price {
+	float: right;
+	font-weight: 600;
+	font-size: 32px;
+	color: #383834;
+	line-height: 28px;
+}
+
+.item_row .item_row_title {
+	display: block;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.item_row .item_row_description {
+	font-size: 14px;
+	font-color: #4f4d4b;
+}
+
+.avatar {
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	border-radius: 50px;
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.3);
+}
+
+.avatar.avatar-small {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+}
+
+#items .items_row .items_row_description {
+	padding-top: 3px;
+}
+
+#items {
+	background-color: white;
+	border-radius: 8px;
+}
+
+#items a {
+	color: #1d95cb;
+}
+
+#items .item_row {
+	padding: 18px;
+	border-bottom: 1px solid #eee;
+}
+
+.category_results {
+	margin-top: 20px;
+	min-height: 600px;
+}
+
+.navbar.navbar-inner {
+	background-color: #3F454F !important;
+}
