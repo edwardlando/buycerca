@@ -11,6 +11,17 @@
     </div>
   <% end %>
 
+  <li class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :placeholder => "Group name" %> 
+  </li>
+
+  <li class="field">
+    <%= f.label :avatar, "Group image" %><br />
+    <%= f.file_field :avatar %>
+  </li>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

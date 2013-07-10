@@ -7,4 +7,16 @@ html, body {
     height: auto !important;
 }
 
-body { padding-top: 60px; }
+body { 
+	padding-top: 60px;
+	margin-top: 20px;
+ }
+
+.group_tile {
+	position: relative;
+	height: 165px;
+	width: 315px;
+	overflow: hidden;
+	float: left;
+	margin: 0 25px 25px 0;
+}
