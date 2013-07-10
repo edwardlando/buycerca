@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, 
-  :provider, :uid, :name
+  :provider, :uid, :name, :image, :location
   # attr_accessible :title, :body
 
   has_many :items
@@ -17,10 +17,15 @@ class User < ActiveRecord::Base
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     unless user
+      p "9999999"
+      p auth
+      p "9999999"
       user = User.create( name:auth.extra.raw_info.name,
                           provider:auth.provider,
                           uid:auth.uid,
                           email:auth.info.email,
+                          image:auth.info.image,
+                          location:auth.info.location,
                           password:Devise.friendly_token[0,20]
                         )
     end

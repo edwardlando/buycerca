@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <%= @user.name %>
+<%= image_tag @user.image %>
+<%= @user.location %>
 
 <%= link_to 'Edit', edit_user_registration_path(@user) %>
 

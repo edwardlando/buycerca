@@ -31,6 +31,16 @@
     <%= f.file_field :avatar %>
   </li>
 
+  <li class="field">
+    <%= f.label :reason %><br />
+    <%= f.text_field :reason, :placeholder => "Why are you selling this?" %>
+  </li>
+
+  <li class="field">
+    <%= f.label :story %><br />
+    <%= f.text_field :story, :placeholder => "Most awesome story associated with this item." %>
+  </li>
+
   <br/><br/><br/>
   <div class="actions">
     <%= f.submit %>
