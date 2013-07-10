@@ -8,10 +8,10 @@ body {
 	margin-top: 20px;
  }
 
-html, body, p, h1, h2, h3, a, span, div {
+html, body, p, h1, h2, h3, a, span, div, div {
 	font-family: "Helvetica Neue";
 }
-.group_tile, .item_tile {
+.group_tile {
 	position: relative;
 	height: 165px;
 	width: 280px;
@@ -19,6 +19,17 @@ html, body, p, h1, h2, h3, a, span, div {
 	float: left;
 	margin: 0 25px 25px 0;
 }
+
+.item_tile {
+	position: relative;
+	height: 500px;
+	width: 280px;
+	overflow: hidden;
+	float: left;
+	margin: 0 25px 25px 0;
+}
+
+
 
 .field {
 	list-style: none;
@@ -49,4 +60,15 @@ a:hover {
 .user_info {
 	margin-bottom: 50px;
 }
+
+.user_items {
+	margin-top: 50px;
+}
+
+.seller, .item_name {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
 

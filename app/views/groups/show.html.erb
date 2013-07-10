@@ -1,6 +1,15 @@
 <% @items.each do |i| %>
-  <%= link_to i.name, i %> <br/>
-  <%= image_tag i.avatar.url(:medium) %> <br/>
+	<div class="item_tile">
+	  <div class="item_info">
+		  <p class="item_name"><%= link_to i.name, i %></p> 
+		  <%= image_tag i.avatar.url(:medium) %> <br/>
+	  </div>
+	  <div class="seller">
+	  	<%= link_to current_user do %>
+		  	<%= image_tag i.user.image %> <%= i.user.name %>
+	  	<% end %>
+	  </div>
+	</div>
 <% end %>
 
 
