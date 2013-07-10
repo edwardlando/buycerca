@@ -1,3 +1,12 @@
-
-
-<%= image_tag current_user.image %> <br/>
+<div class="nav pull-left brand"><%= link_to "Market", root_path %></div>
+<% if user_signed_in? %>
+	<div class="nav pull-right">
+		<%= link_to current_user do %>
+			<div class="user_profile_link">
+				<%= image_tag current_user.image %>  <%= current_user.first_name %>  
+			</div>
+		<% end %>
+	</div>
+<% else %>
+    <div class="nav pull-right"><%= button_to "Login with Facebook", user_omniauth_authorize_path(:facebook), :class => "btn btn-large btn-primary" %></div>
+<% end %>

@@ -1,8 +1,14 @@
-<p id="notice"><%= notice %></p>
+
+
+<div>
+	<%= image_tag (@user.image), :class => "big_user_photo" %>
+</div>
 
 <%= @user.name %>
-<%= image_tag @user.image %>
+
 <%= @user.location %>
 
-<%= link_to 'Edit', edit_user_registration_path(@user) %>
+<% if @user == current_user %>
+	<%= link_to 'Edit', edit_user_registration_path(@user) %>
+<% end %>
 

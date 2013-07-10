@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, 
-  :provider, :uid, :name, :image, :location
+  :provider, :uid, :name, :image, :location, :first_name
   # attr_accessible :title, :body
 
   has_many :items
@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
       p auth
       p "9999999"
       user = User.create( name:auth.extra.raw_info.name,
+                          first_name:auth.info.first_name,
                           provider:auth.provider,
                           uid:auth.uid,
                           email:auth.info.email,

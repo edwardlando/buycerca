@@ -1,20 +1,17 @@
 
-<% if user_signed_in? %>
-	Hello, <%= link_to current_user.name, current_user %>
-<% else %>
-	<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-<% end %>
+
+<%= button_to "SELL", new_item_path, :class => "btn btn-large", :method => "get" %> <br/> 
+
+<h3>Or</h3>
 
 <br/>
 
-<%= link_to "SELL", new_item_path, :class => "btn" %> <br/> 
+<h1>Buy in your community</h1>
 
-or
-
-<h1>BUY in your community</h1>
+<br/>
 
 <div class="row">
 <% @groups.each do |g| %>
-	  <div class="group_tile"><%= g.name %><%= link_to image_tag(g.avatar.url(:medium)), g %></div> 
+	  <div class="group_tile"><strong><%= g.name %></strong><%= link_to image_tag(g.avatar.url(:medium)), g %></div> 
 <% end %>
 </div>
