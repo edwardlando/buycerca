@@ -22,11 +22,6 @@
   </li>
 
   <li class="field">
-    <%= f.label :group_id %>
-    <%= f.select :group_id, @groups.collect {|c| [ c.name, c.id ]} %>
-  </li>
-
-  <li class="field">
     <%= f.label :avatar, "Item image" %>
     <%= f.file_field :avatar %>
   </li>
@@ -40,6 +35,8 @@
     <%= f.label :story %>
     <%= f.text_area :story, :placeholder => "Watched my team win the superbowl on this couch!", :rows => 3 %>
   </li>
+
+  <%= f.hidden_field :group_id, :value => @group.id %>
 
   <br/><br/><br/>
   <div class="actions">

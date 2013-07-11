@@ -1,17 +1,13 @@
-
-
-<%= button_to "SELL", new_item_path, :class => "btn btn-large", :method => "get" %> <br/> 
-
-<h3>Or</h3>
+<h1 align="center">Buy and sell in your community</h1>
 
 <br/>
 
-<h1>Buy in your community</h1>
 
-<br/>
-
-<div class="row">
-<% @groups.each do |g| %>
-	  <div class="group_tile"><strong><%= g.name %></strong><%= link_to image_tag(g.avatar.url(:medium), :class => "circular_group"), g %></div> 
-<% end %>
+<div class="groups" align="center">
+	<% @groups.each do |g| %>
+		  <div class="group_tile"><strong><%= g.name %></strong><%= link_to image_tag(g.avatar.url(:medium), :class => "circular_group"), g %></div> 
+	<% end %>
 </div>
+
+
+<h3 align="center">Want your group to be on here? Email us.</h3>

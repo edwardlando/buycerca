@@ -1,4 +1,12 @@
 
+<%= link_to "SELL in this community",
+	new_item_path(:group_id => @group),
+	:method => :get, 
+	:class => "btn btn-large right",
+	:group_id => @group.id %>
+
+<br/> <br/> 
+
 <div class="category_results">
    <div align="center">
 	<%= image_tag (@group.avatar.url(:medium)), :class => "circular_group" %>

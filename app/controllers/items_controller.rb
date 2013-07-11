@@ -28,8 +28,8 @@ class ItemsController < ApplicationController
   # GET /items/new.json
   def new
     @item = Item.new
-    @groups = Group.all
-  
+    @group = Group.find(params[:group_id])
+   
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @item }
