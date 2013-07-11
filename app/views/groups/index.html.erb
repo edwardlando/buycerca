@@ -1,13 +1,20 @@
-<h1 align="center">Buy and sell in your community</h1>
+<h1 align="center" class="tagline">Buy and sell in your community</h1>
 
 <br/>
 
 
 <div class="groups" align="center">
 	<% @groups.each do |g| %>
-		  <div class="group_tile"><strong><%= g.name %></strong><%= link_to image_tag(g.avatar.url(:medium), :class => "circular_group"), g %></div> 
+		  <div class="group_tile">
+		  	<strong></strong>
+		  	<div class="group_name">
+		  		<%= g.name %>
+		  	</div>
+			<%= link_to image_tag(g.avatar.url(:medium), 
+			    :class => "circular_group"), g %>
+		  </div> 
+
 	<% end %>
 </div>
 
 
-<h3 align="center">Want your group to be on here? Email us.</h3>

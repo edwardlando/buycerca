@@ -21,6 +21,16 @@ html, body, p, h1, h2, h3, a, span, div, div {
 	margin: 0 25px 25px 0;
 }
 
+.group_name {
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 2px;
+}
+
+.tagline {
+	margin-bottom: 20px;
+}
+
 
 .field {
 	list-style: none;
@@ -31,10 +41,10 @@ html, body, p, h1, h2, h3, a, span, div, div {
 	max-height: 100%;
 }
 
-a:hover {
+a:hover, a.btn.btn-large:hover {
 	color: black !important;
 	background-color: transparent !important;
-
+	background-position: 0 0 !important;
 }
 
 .big_user_photo {
@@ -213,8 +223,24 @@ a:hover {
 	float: right;
 }
 
+#new_item {
+    text-align:center;
+}
 
+.center {
+    display:inline-block;
+}
 
+label {
+	text-align: left !important;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+input#item_avatar {
+	width: 200px;
+}
 
 
 

@@ -10,36 +10,39 @@
       </ul>
     </div>
   <% end %>
+  <div class="center">
 
-  <li class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, :placeholder => "Leather couch" %> 
-  </li>
+    <li class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, :placeholder => "Leather couch" %> 
+    </li>
 
-  <li class="field">
-    <%= f.label :price %>
-    <%= f.text_field :price, :placeholder => "140" %> 
-  </li>
+    <li class="field">
+      <%= f.label :price %>
+      <%= f.text_field :price, :placeholder => "140" %> 
+    </li>
 
-  <li class="field">
-    <%= f.label :avatar, "Item image" %>
-    <%= f.file_field :avatar %>
-  </li>
+    <li class="field">
+      <%= f.label :avatar, "Item image" %>
+      <%= f.file_field :avatar %>
+    </li>
 
-  <li class="field">
-    <%= f.label :reason, "Why are you selling this?" %>
-    <%= f.text_field :reason, :placeholder => "I'm moving out!" %>
-  </li>
+    <li class="field">
+      <%= f.label :reason, "Why are you selling this?" %>
+      <%= f.text_field :reason, :placeholder => "I'm moving out!" %>
+    </li>
 
-  <li class="field">
-    <%= f.label :story %>
-    <%= f.text_area :story, :placeholder => "Watched my team win the superbowl on this couch!", :rows => 3 %>
-  </li>
+    <li class="field">
+      <%= f.label :story, "Awesome story about this item" %>
+      <%= f.text_area :story, :placeholder => "Watched my team win the superbowl on this couch!", :rows => 3 %>
+    </li>
 
-  <%= f.hidden_field :group_id, :value => @group.id %>
+    <%= f.hidden_field :group_id, :value => @group.id %>
 
-  <br/><br/><br/>
-  <div class="actions">
-    <%= f.submit "List this item!", :class => "btn btn-large btn-primary" %>
+    <br/><br/><br/>
+    <div class="actions">
+      <%= f.submit "List this item!", :class => "btn btn-large btn-primary" %>
+    </div>
   </div>
 <% end %>
+
