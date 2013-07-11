@@ -1,5 +1,35 @@
-<p id="notice"><%= notice %></p>
+
+<div>
+	<div class="item_left">
+		<h3><%= @item.name %></h3>
+		<div class="item_large_photo">
+			<%= image_tag(@item.avatar.url(:large), :class => "listing_card_image") %>
+		</div>
+		
+	</div>
+	<div class="item_right right">
+		<div class="item_pragmatic">
+			<div class="item_price"><%= number_to_currency(@item.price) %></div> 
+			<br/><br/>
+			<div class="item_description">
+				<h3>Why I'm selling it:</h3> <%= @item.reason %> <br/>
+				<h3>Awesome item story:</h3> <%= @item.story %>
+			<div class="item_social"></div>
+
+		<br/><br/>
+		<div align="center">
+			<%= link_to "BUY this item", "#", :class => "btn btn-large" %>
+		</div>
+
+		<br/><br/>
+		<div class="seller_info">
+			<h4 align="center"><%= link_to @item.user.name, @item.user %>
+			</h4>
+			<div align="center"><%= image_tag(@item.user.large_image, :class => "circular") %></div>
+		</div>
+	</div>
+</div>
 
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+
+

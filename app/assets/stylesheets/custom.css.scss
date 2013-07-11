@@ -90,6 +90,15 @@ a:hover {
 	margin-right: 20px;
 }
 
+.item_large_photo img {
+	display: block;
+	float: left;
+	width: 600px;
+	height: 600px;
+	border-radius: 3px;
+	margin-right: 20px;
+}
+
 .photo {
 	position: relative;
 	display: block;
@@ -126,13 +135,14 @@ a:hover {
 	font-weight: 500;
 }
 
-.item_row .item_row_price {
+.item_row .item_row_price, .item_price {
 	float: right;
 	font-weight: 600;
 	font-size: 32px;
 	color: #383834;
 	line-height: 28px;
 }
+
 
 .item_row .item_row_title {
 	display: block;
@@ -202,5 +212,9 @@ a:hover {
 .right {
 	float: right;
 }
+
+
+
+
 
 

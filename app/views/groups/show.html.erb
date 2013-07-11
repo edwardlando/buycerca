@@ -15,7 +15,7 @@
 	<div id="items">
 		<% @items.each do |i| %>
 			<div class="item_row">
-				<div class="item_row_photo photo small"><%= image_tag i.avatar.url(:medium) %>
+				<div class="item_row_photo photo small"><%= link_to image_tag(i.avatar.url(:medium)), i %>
 				</div>
 				<div class="item_row_info">
 					<%= link_to i.name, i, :class => "item_row_title" %>
