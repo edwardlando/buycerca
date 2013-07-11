@@ -9,7 +9,8 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, 
-  :provider, :uid, :name, :image, :location, :first_name, :large_image, :story
+  :provider, :uid, :name, :image, :location, :first_name, :large_image, :story, :username,
+  :facebook_email
   # attr_accessible :title, :body
 
   has_many :items
@@ -19,6 +20,8 @@ class User < ActiveRecord::Base
     unless user
       user = User.create( name:auth.extra.raw_info.name,
                           first_name:auth.info.first_name,
+                          username:auth.extra.raw_info.username,
+                          facebook_email:auth.extra.raw_info.username+"@facebook.com",
                           provider:auth.provider,
                           uid:auth.uid,
                           email:auth.info.email,
