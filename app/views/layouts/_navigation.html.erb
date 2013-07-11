@@ -1,11 +1,21 @@
 <div class="nav pull-left logo"><%= link_to "BuyCerca", root_path %></div>
 <% if user_signed_in? %>
 	<div class="nav pull-right">
-		<%= link_to current_user do %>
-			<div class="user_profile_link">
+        <div class="dropdown">
+			<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+		    <div class="user_profile_link">
 				<%= image_tag current_user.image %>  <%= current_user.first_name %>  
 			</div>
-		<% end %>
+		  </a>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		    <li><%= link_to "Profile", current_user %></li>
+		    <li><%= link_to "Messages", "#" %></li>
+		  </ul>
+		</div>
+
+
+
+
 	</div>
 <% else %>
     <div class="nav pull-right"><%= button_to "Login with Facebook", user_omniauth_authorize_path(:facebook), :class => "btn btn-large btn-primary" %></div>
