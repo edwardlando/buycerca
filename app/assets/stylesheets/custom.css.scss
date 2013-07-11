@@ -154,6 +154,10 @@ a:hover, a.btn.btn-large:hover {
 }
 
 
+.item_price {
+	float: left;
+}
+
 .item_row .item_row_title {
 	display: block;
 	font-size: 18px;
@@ -223,6 +227,10 @@ a:hover, a.btn.btn-large:hover {
 	float: right;
 }
 
+.left {
+	float: left;
+}
+
 #new_item {
     text-align:center;
 }
@@ -240,6 +248,10 @@ label {
 
 input#item_avatar {
 	width: 200px;
+}
+
+.seller_info {
+	margin-top:30px;
 }
 
 

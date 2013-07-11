@@ -18,11 +18,15 @@
 
 		<br/><br/>
 		<div align="center">
-			<%= link_to "BUY this item", "#", :class => "btn btn-large" %>
+			<%= link_to "BUY this item",
+			users_facebook_message_path(:seller_id => @item.user),
+			:class => "btn btn-large left", 
+			:seller_id => @item.user.id,
+			:method => :get %>
 		</div>
 
 		<br/><br/>
-		<div class="seller_info">
+		<div class="seller_info left">
 			<h4 align="center"><%= link_to @item.user.name, @item.user %>
 			</h4>
 			<div align="center"><%= image_tag(@item.user.large_image, :class => "circular") %></div>

@@ -4,6 +4,8 @@ Market::Application.routes.draw do
 
   resources :items
 
+  match 'users/facebook_message', :to => 'users#facebook_message'
+
 
   devise_for :users, :controllers => { 
                               :omniauth_callbacks => "users/omniauth_callbacks", 

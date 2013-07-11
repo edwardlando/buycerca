@@ -80,4 +80,15 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def facebook_message
+    @buyer = current_user
+    @seller = User.find(params[:seller_id])
+    UserMailer.facebook_message(@buyer, @seller).deliver
+
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Message sent. Check your Facebook.'}
+      format.json { head :no_content }
+    end
+  end
 end
